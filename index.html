@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+
+<!--CSS-->
+<style type="text/css">
+    /*css untuk mengatur margin dan pading website*/
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /*css untuk memberi background pada web*/
+    body {
+        background-color: #27b04a;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    /*css untuk mengatur tombol*/
+    .button {
+        font-family: fantasy;
+        font-size: 20px
+    }
+
+    /*css untuk mengatur judul*/
+    .judul {
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0px auto;
+    }
+
+    /*css untuk membuat margin agar lebih tertata*/
+    .container {
+        height: 400px;
+        width: 450px;
+        margin: 10px auto;
+        background-color: #474473;
+        border: 20px inset #eac595;
+        border-radius: 17px;
+        padding: 40px 30px;
+    }
+
+    /*css untuk mengatur input*/
+    input {
+        height: 20x;
+        width: 100px;
+        margin: 20px;
+        padding: 1px;
+        border-radius: 0px;
+        font: bold normal 30px Verdana;
+    }
+
+    /*css untuk memberikan efek yang mau di pencet*/
+    input:hover {
+        background-color: silver;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form method="POST" name="variabel">
+            <div class="judul"> Kalkulator Sederhana</div>
+
+            <!--input textbox -->
+            <p>Masukkan Bilangan Pertama : <input type="text" name="bil1" size="20"></p>
+            <p>Masukkan Bilangan Kedua : <input type="text" name="bil2" size="20"></p>
+            <p>Hasil : <input type="text" name="hasil" size="20">
+
+                <!--tombol-->
+                <div class="button">
+                    <input type="button" value="+" name="jumlah" onclick=penjumlahan()>
+                    <input type="button" value="-" name="kurang" onclick=pengurangan()>
+                    <input type="button" value="*" name="kali" onclick=perkalian()>
+                    <input type="button" value=":" name="bagi" onclick=pembagian()>
+                    <input type="reset" name="reset">
+                </div>
+
+    </div>
+
+    <!-- Menginput button untuk mengeksekusi function -->
+    </form>
+    <script language="Javascript">
+        // memanggil function penjumlahan 
+        function penjumlahan() {
+            // deklararasi dan input nilai variabel
+            var ang1 = parseInt(document.variabel.bil1.value)
+            var ang2 = parseInt(document.variabel.bil2.value)
+            // deklarai operasi penjumlahan 
+            var hitung_jumlah = ang1 + ang2
+            document.variabel.hasil.value = hitung_jumlah // output : hasil penjumlahan 
+        }
+
+        // memanggil function pengurangan
+        function pengurangan() {
+            // deklararasi dan input nilai variabel
+            var ang1 = parseInt(document.variabel.bil1.value)
+            var ang2 = parseInt(document.variabel.bil2.value)
+            // deklarai operasi pengurangan
+            var hitung_kurang = ang1 - ang2
+            document.variabel.hasil.value = hitung_kurang // output : hasil pengurangan
+        }
+
+        // memanggil function perkalian
+        function perkalian() {
+            // deklararasi dan input nilai variabel
+            var ang1 = parseInt(document.variabel.bil1.value)
+            var ang2 = parseInt(document.variabel.bil2.value)
+            // deklarai operasi perkalian
+            var hitung_kali = ang1 * ang2
+            document.variabel.hasil.value = hitung_kali // output : hasil perkalian
+        }
+
+        // memanggil function pembagian
+        function pembagian() {
+            // deklararasi dan input nilai variabel
+            var ang1 = parseInt(document.variabel.bil1.value)
+            var ang2 = parseInt(document.variabel.bil2.value)
+            // deklarai operasi pembagian 
+            var hitung_bagi = ang1 / ang2
+            document.variabel.hasil.value = hitung_bagi // output : hasil pembagian
+        }
+    </script>
+</body>
+
+</html>

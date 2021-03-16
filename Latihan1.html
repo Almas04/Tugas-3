@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Latihan 4.6 Nomor 1</title>
+</head>
+
+<body>
+    <form method="POST" name="form_nilai">
+        <h1>Cek Nilai</h1>
+
+        <!-- Menginput button untuk mengeksekusi -->
+        <p><input type="button" value="Hitung" name="B1" onclick=nilai1()>
+    </form>
+
+    <script language="Javascript">
+        nilai = window.prompt("Nilai (0-100): ");
+        // memanggil function untuk mencek nilai
+        function nilai1() {
+            //pengkondisian if else
+            if (nilai < 0) //agar tidak ada nilai negatif
+                document.write("Nilai Tidak Valid")
+            if (nilai > 40)
+                if (nilai > 55)
+                    if (nilai > 60)
+                        if (nilai > 65)
+                            if (nilai > 70)
+                                if (nilai > 80)
+                                    if (nilai <= 100)
+                                        document.write("A")
+            else
+                document.write("Nilai Tidak Valid") //untuk nilai >100
+            else
+                document.write("AB")
+            else
+                document.write("B")
+            else
+                document.write("BC")
+            else
+                document.write("C")
+            else
+                document.write("D")
+            else if (nilai >= 0)
+                document.write("E")
+        }
+    </script>
+</body>
+
+</html>
